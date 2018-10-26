@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h1>My Projects</h1>
+	<br />
+	<div class="container">
+        <div id="cardspot" class="row">
+
+        </div>
+    </div>
+
+<script>
+    $(document).ready(function(){
+
+				$.getJSON("static/Projects.json",function(result){
+						$.each(result.projects, function(key,value){
+							$("#cardspot").append("<div class='col-4-lg'> \
+	                <!-- Bootstrap Card --> \
+									<div class='col-md-4'> \
+	                <div class='card' style='width:18rem;'> \
+	                    <div class='card-body'> \
+	                        <h5 class='card-title'>" + value.lang.toUpperCase() + " - Level " + value.level + "</h5> \
+	                        <p class='card-text'> \
+	                           " + value.description +" \
+	                        </p>\
+	                        <a href='#' class='btn btn-primary'>Read...</a>\
+	                    </div>\
+	                </div>\
+	            </div>\
+							</div>");
+					})
+				});
+
+        $('.col-4-lg').hover(
+            // trigger when mouse hover
+            function(){
+                $(this).animate({
+                    marginTop: "-=1%",
+                },50);
+            },
+
+            // trigger when mouse out
+            function(){
+                $(this).animate({
+                    marginTop: "0%"
+                },50);
+            }
+        );
+    });
+</script>
+{% endblock content%}

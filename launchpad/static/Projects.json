@@ -1,0 +1,28 @@
+{
+  "projects": [
+                {
+                  "lang": "python",
+                  "level": 1,
+                  "description": "Get started with this beginner Python project!"
+                },
+                {
+                  "lang": "java",
+                  "level": 2,
+                  "description": "Try this fun Java project!"
+                },
+                {
+                  "lang": "c++",
+                  "level": 2,
+                  "description": "Try your skills with this great C++ project!"
+                },
+                {
+                  "lang": "reactjs",
+                  "level": 3,
+                  "description": "Challenge yourself with this level 3 JavaScript library!"
+                }
+
+  ],
+
+  "dataTitle": "Projects",
+  "version": 1.0
+}
